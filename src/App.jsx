@@ -1,35 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import { Routes } from "react-router-dom";
+import { Route } from "react-router-dom";
+import NavBar from "./components/NavBar";
+import HomePage from "./pages/HomePage";
+import Login from "./pages/Login";
+import vector from "./assets/bg-waves/Vector.svg";
+import vector1 from "./assets/bg-waves/Vector-1.svg";
+import vector2 from "./assets/bg-waves/Vector-2.svg";
+import vector3 from "./assets/bg-waves/Vector-3.svg";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div className="relative h-full">
+      {/* Background images */}
+      <img src={vector} className="absolute z-0 h-full" alt="" />
+      <img src={vector1} className="absolute z-0 h-full" alt="" />
+      <img src={vector2} className="absolute left-[700px] z-0 h-full" alt="" />
+      <img src={vector3} className="absolute left-[820px] z-0 h-full" alt="" />
 
-export default App
+      {/* Content */}
+      <div className="py-[20px] px-[40px] relative z-10">
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </div>
+    </div>
+  );
+}
