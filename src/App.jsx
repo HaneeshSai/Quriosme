@@ -8,6 +8,7 @@ import vector from "./assets/bg-waves/Vector.svg";
 import vector1 from "./assets/bg-waves/Vector-1.svg";
 import vector2 from "./assets/bg-waves/Vector-2.svg";
 import vector3 from "./assets/bg-waves/Vector-3.svg";
+import PopularServices from "./pages/PopularServices";
 
 export default function App() {
   return (
@@ -19,11 +20,12 @@ export default function App() {
       <img src={vector3} className="absolute left-[820px] z-0 h-full" alt="" />
 
       {/* Content */}
-      <div className="py-[20px] px-[40px] relative z-10">
+      <div className="py-[20px] relative z-10">
         <NavBar />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/popularservices" element={<PopularServices />} />
         </Routes>
       </div>
     </div>

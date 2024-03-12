@@ -7,7 +7,7 @@ import apple from "../assets/icons/apple.svg";
 
 export default function Login() {
   return (
-    <div className="p-10 w-full flex justify-center">
+    <div className="p-10 w-full px-[40px] flex justify-center">
       <div className="flex rounded-3xl bg-white">
         <div>
           <img src={loginImg} className="h-[550px]" alt="" />
