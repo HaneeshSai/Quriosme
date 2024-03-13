@@ -10,6 +10,9 @@ import vector2 from "./assets/bg-waves/Vector-2.svg";
 import vector3 from "./assets/bg-waves/Vector-3.svg";
 import PopularServices from "./pages/PopularServices";
 import Services from "./pages/Services";
+import WhyUs from "./pages/WhyUs";
+import About from "./pages/About";
+import Queries from "./pages/Queries";
 
 export default function App() {
   return (
@@ -35,6 +38,9 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/whyquriosme" element={<WhyUs />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/complexqueries" element={<Queries />} />
           <Route path="/popularservices" element={<PopularServices />} />
         </Routes>
       </div>

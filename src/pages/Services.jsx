@@ -56,9 +56,9 @@ const data = [
 
 export default function Services() {
   return (
-    <div className="mx-[40px] my-20">
+    <div className="mx-[100px] my-20">
       <div>
-        <h1 className="text-2xl font-semibold">
+        <h1 className="text-3xl font-semibold">
           <FancyText gradient={{ from: "yellow", to: "white", type: "linear" }}>
             Qurios about something ?
           </FancyText>
@@ -69,7 +69,7 @@ export default function Services() {
         </h1>
       </div>
 
-      <div className="mx-[140px] grid grid-cols-5 gap-20 my-16">
+      <div className="mx-[60px] grid grid-cols-5 gap-20 my-16">
         {data.map((e, i) => (
           <div
             key={i}
