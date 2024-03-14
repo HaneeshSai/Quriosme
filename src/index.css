@@ -50,3 +50,6 @@ html, body {
     color: yellow
 }
 
+.left-shadow {
+    box-shadow: -3px 1px 7px rgba(0, 0, 0, 0.563);
+}
