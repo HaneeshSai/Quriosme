@@ -104,50 +104,53 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <section className="h-screen flex justify-center items-center">
-        <PopularServices />
-      </section>
-      <section className="h-screen flex justify-center items-center">
-        <PopularServices />
-      </section>
-      <section className="mx-32 my-10 h-screen flex items-center">
-        <div>
-          <h1 className="text-3xl mb-10">
-            The <span className="font-bold">Best</span> Part about{" "}
-            <span className="font-bold">QuriousMe?</span>
-          </h1>
-          <div className="my-7 text-lg">
-            <h2 className="text-xl font-semibold">Lorem ipsum dolor</h2>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod
-              provident eveniet perspiciatis dignissimos possimus tenetur illo
-              obcaecati amet rerum sapiente quas aliquam officiis facilis ut,
-              culpa doloribus unde at saepe.
-            </p>
+      <div className="bg-white">
+        <section className="h-screen flex justify-center items-center">
+          <PopularServices color={"white"} />
+        </section>
+        <section className="h-screen flex justify-center items-center">
+          <PopularServices color={"white"} />
+        </section>
+        <section className="mx-32 text-black my-10 h-screen flex items-center">
+          <div>
+            <h1 className="text-3xl mb-10">
+              The <span className="font-bold">Best</span> Part about{" "}
+              <span className="font-bold">QuriousMe?</span>
+            </h1>
+            <div className="my-7 text-lg">
+              <h2 className="text-xl font-semibold">Lorem ipsum dolor</h2>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod
+                provident eveniet perspiciatis dignissimos possimus tenetur illo
+                obcaecati amet rerum sapiente quas aliquam officiis facilis ut,
+                culpa doloribus unde at saepe.
+              </p>
+            </div>
+            <div className="my-7">
+              <h2 className="text-xl font-semibold">Lorem ipsum dolor</h2>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod
+                provident eveniet perspiciatis dignissimos possimus tenetur illo
+                obcaecati amet rerum sapiente quas aliquam officiis facilis ut,
+                culpa doloribus unde at saepe.
+              </p>
+            </div>
+            <div className="my-7">
+              <h2 className="text-xl font-semibold">Lorem ipsum dolor</h2>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod
+                provident eveniet perspiciatis dignissimos possimus tenetur illo
+                obcaecati amet rerum sapiente quas aliquam officiis facilis ut,
+                culpa doloribus unde at saepe.
+              </p>
+            </div>
           </div>
-          <div className="my-7">
-            <h2 className="text-xl font-semibold">Lorem ipsum dolor</h2>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod
-              provident eveniet perspiciatis dignissimos possimus tenetur illo
-              obcaecati amet rerum sapiente quas aliquam officiis facilis ut,
-              culpa doloribus unde at saepe.
-            </p>
-          </div>
-          <div className="my-7">
-            <h2 className="text-xl font-semibold">Lorem ipsum dolor</h2>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod
-              provident eveniet perspiciatis dignissimos possimus tenetur illo
-              obcaecati amet rerum sapiente quas aliquam officiis facilis ut,
-              culpa doloribus unde at saepe.
-            </p>
-          </div>
-        </div>
-      </section>
-      <section>
-        <Services />
-      </section>
+        </section>
+        <section className="h-screen">
+          <Services color={"white"} />
+        </section>
+        <section className="h-screen"></section>
+      </div>
     </div>
   );
 }

@@ -54,15 +54,24 @@ const data = [
   },
 ];
 
-export default function Services() {
+export default function Services({ color }) {
   return (
-    <div className="mx-[100px] my-20">
+    <div
+      className={
+        color === "white" ? "mx-[100px] my-20 text-black" : "mx-[100px] my-20"
+      }
+    >
       <div>
         <h1 className="text-3xl font-semibold">
-          <FancyText gradient={{ from: "yellow", to: "white", type: "linear" }}>
-            Qurios about something ?
-          </FancyText>
-          <br />
+          {color !== "white" ? (
+            <FancyText
+              gradient={{ from: "yellow", to: "white", type: "linear" }}
+            >
+              Qurios about something ?
+            </FancyText>
+          ) : (
+            <p>Qurios about something ?</p>
+          )}
           <span className="font-medium">
             Feel free to reach out, we’re here to help !!
           </span>

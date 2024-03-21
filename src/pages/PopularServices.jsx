@@ -49,12 +49,22 @@ const data = [
 
 // ... (your imports)
 
-export default function PopularServices() {
+export default function PopularServices({ color }) {
   return (
     <div className="mt-14 overflow-x-hidden h-[500px]">
-      <h1 className="text-2xl px-[40px]">
+      <h1
+        className={
+          color === "white"
+            ? "text-2xl px-[40px] text-black"
+            : "text-2xl px-[40px]"
+        }
+      >
         Popular{" "}
-        <span className="text-yellow-300 font-bold">
+        <span
+          className={
+            color === "white" ? "font-bold" : "text-yellow-300 font-bold"
+          }
+        >
           Qurios-ities based on topics
         </span>
       </h1>
@@ -79,7 +89,9 @@ export default function PopularServices() {
                     className="h-[320px] moveup-highlight " // Use absolute positioning
                     alt=""
                   />
-                  <p className="text-xl">{e.name}</p>
+                  <p className={color === "white" ? "text-black" : "text-xl"}>
+                    {e.name}
+                  </p>
                 </div>
               </SwiperSlide>
             ))}
