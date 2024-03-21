@@ -51,7 +51,7 @@ const data = [
 
 export default function PopularServices() {
   return (
-    <div className="mt-14">
+    <div className="mt-14 overflow-x-hidden h-[500px]">
       <h1 className="text-2xl px-[40px]">
         Popular{" "}
         <span className="text-yellow-300 font-bold">

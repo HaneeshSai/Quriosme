@@ -2,7 +2,6 @@ import React from "react";
 import { Routes } from "react-router-dom";
 import { Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
-import HomePage from "./pages/HomePage";
 import Login from "./pages/Login";
 import vector from "./assets/bg-waves/Vector.svg";
 import vector1 from "./assets/bg-waves/Vector-1.svg";
@@ -13,28 +12,26 @@ import Services from "./pages/Services";
 import WhyUs from "./pages/WhyUs";
 import About from "./pages/About";
 import Queries from "./pages/Queries";
+import Landing from "./pages/Landing";
+import HomePage from "./pages/HomePage";
 
 export default function App() {
   return (
     <div className="relative h-full">
       {/* Background images */}
-      <img src={vector} className="absolute z-0 h-screen" alt="" />
-      <img src={vector1} className="absolute z-0 h-screen" alt="" />
-      <img
-        src={vector2}
-        className="absolute left-[700px] z-0 h-screen"
-        alt=""
-      />
-      <img
-        src={vector3}
-        className="absolute left-[820px] z-0 h-screen"
-        alt=""
-      />
+      <div className="fixed inset-0 overflow-hidden z-0">
+        {/* Background images */}
+        <img src={vector} className="absolute h-full" alt="" />
+        <img src={vector1} className="absolute h-full" alt="" />
+        <img src={vector2} className="absolute left-[700px] h-full" alt="" />
+        <img src={vector3} className="absolute left-[820px] h-full" alt="" />
+      </div>
 
       {/* Content */}
       <div className="py-[20px] relative z-10">
         <NavBar />
         <Routes>
+          <Route path="/landing" element={<Landing />} />
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/services" element={<Services />} />

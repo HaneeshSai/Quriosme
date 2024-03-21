@@ -1,27 +1,62 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import Landing from "./Landing";
 import Typewriter from "typewriter-effect";
 import search from "../assets/icons/search.svg";
-import home1 from "../assets/images/homepage/home1.svg";
-import img2 from "../assets/images/homepage/img2.svg";
-import img3 from "../assets/images/homepage/img3.svg";
-const images = [home1, img2, img3];
-import classNames from "classnames";
+import PopularServices from "./PopularServices";
+import web from "../assets/images/popularServices/web.svg";
+import content from "../assets/images/popularServices/content.svg";
+import graphic from "../assets/images/popularServices/graphic.svg";
+import logo from "../assets/images/popularServices/logo.svg";
+import video from "../assets/images/popularServices/videoEditing.svg";
+import Services from "./Services";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+
+const data = [
+  {
+    name: "Video Editing",
+    img: video,
+  },
+  {
+    name: "Web Development",
+    img: web,
+  },
+  {
+    name: "Content Writing",
+    img: content,
+  },
+  {
+    name: "Logo Design",
+    img: logo,
+  },
+  {
+    name: "Graphic Designing",
+    img: graphic,
+  },
+  {
+    name: "Content Writing",
+    img: content,
+  },
+  {
+    name: "Logo Design",
+    img: logo,
+  },
+  {
+    name: "Graphic Designing",
+    img: graphic,
+  },
+];
 
 export default function HomePage() {
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 6000);
-
-    return () => clearInterval(interval);
-  }, [images.length]);
-
   return (
-    <div className="px-[60px]  ">
-      <div className="flex h-screen ">
-        <div className="flex w-[500px] mb-32 flex-col gap-1 justify-center">
+    <div className="">
+      <section className="flex justify-center h-screen items-center">
+        <div className="flex w-[500px] mb-32 flex-col items-center gap-1 justify-center">
           <h1 className="text-4xl text-nowrap font-bold text-yellow-300">
             What are you Qurios about today??
           </h1>
@@ -68,23 +103,51 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        <div className=" flex-[1.5] relative left-20">
-          {images.map((image, i) => (
-            <img
-              key={i}
-              src={image}
-              alt={`Image ${i + 1}`}
-              className={classNames(
-                "absolute transition-opacity duration-1000",
-                {
-                  "opacity-100": index === i,
-                  "opacity-0": index !== i,
-                }
-              )}
-            />
-          ))}
+      </section>
+      <section className="h-screen flex justify-center items-center">
+        <PopularServices />
+      </section>
+      <section className="h-screen flex justify-center items-center">
+        <PopularServices />
+      </section>
+      <section className="mx-32 my-10 h-screen flex items-center">
+        <div>
+          <h1 className="text-3xl mb-10">
+            The <span className="font-bold">Best</span> Part about{" "}
+            <span className="font-bold">QuriousMe?</span>
+          </h1>
+          <div className="my-7 text-lg">
+            <h2 className="text-xl font-semibold">Lorem ipsum dolor</h2>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod
+              provident eveniet perspiciatis dignissimos possimus tenetur illo
+              obcaecati amet rerum sapiente quas aliquam officiis facilis ut,
+              culpa doloribus unde at saepe.
+            </p>
+          </div>
+          <div className="my-7">
+            <h2 className="text-xl font-semibold">Lorem ipsum dolor</h2>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod
+              provident eveniet perspiciatis dignissimos possimus tenetur illo
+              obcaecati amet rerum sapiente quas aliquam officiis facilis ut,
+              culpa doloribus unde at saepe.
+            </p>
+          </div>
+          <div className="my-7">
+            <h2 className="text-xl font-semibold">Lorem ipsum dolor</h2>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod
+              provident eveniet perspiciatis dignissimos possimus tenetur illo
+              obcaecati amet rerum sapiente quas aliquam officiis facilis ut,
+              culpa doloribus unde at saepe.
+            </p>
+          </div>
         </div>
-      </div>
+      </section>
+      <section>
+        <Services />
+      </section>
     </div>
   );
 }

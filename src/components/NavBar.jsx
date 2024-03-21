@@ -3,7 +3,7 @@ import dropdown from "../assets/icons/dropdown.svg";
 
 export default function NavBar() {
   return (
-    <div className="flex px-[40px] justify-between items-center">
+    <div className="flex px-[40px] sticky top-2 justify-between items-center">
       <div>
         <h1 className="font-k2d font-bold text-3xl">
           Qurios<span className="text-yellow-300">Me</span>.
