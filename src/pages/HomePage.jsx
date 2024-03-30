@@ -16,6 +16,7 @@ import { Navigation } from "swiper/modules";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
+import Footer from "./Footer";
 
 const data = [
   {
@@ -149,8 +150,10 @@ export default function HomePage() {
         <section className="h-screen">
           <Services color={"white"} />
         </section>
-        <section className="h-screen"></section>
       </div>
+      <section className="h-screen bg-none">
+        <Footer />
+      </section>
     </div>
   );
 }
