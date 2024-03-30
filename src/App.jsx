@@ -15,6 +15,7 @@ import Queries from "./pages/Queries";
 import Landing from "./pages/Landing";
 import HomePage from "./pages/HomePage";
 import SearchResults from "./pages/SearchResults";
+import Profile from "./pages/Profile";
 
 export default function App() {
   return (
@@ -41,6 +42,7 @@ export default function App() {
           <Route path="/complexqueries" element={<Queries />} />
           <Route path="/popularservices" element={<PopularServices />} />
           <Route path="/searchresults" element={<SearchResults />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       </div>
     </div>
